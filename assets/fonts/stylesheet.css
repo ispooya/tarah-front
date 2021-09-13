@@ -1,0 +1,159 @@
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('IRANYekan-Bold.eot');
+  src: url('IRANYekan-Bold.eot?#iefix') format('embedded-opentype'), url('IRANYekan-Bold.woff2') format('woff2'),
+    url('IRANYekan-Bold.woff') format('woff'), url('IRANYekan-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekanFN';
+  src: url('IRANYekanFN-Black.eot');
+  src: url('IRANYekanFN-Black.eot?#iefix') format('embedded-opentype'), url('IRANYekanFN-Black.woff2') format('woff2'),
+    url('IRANYekanFN-Black.woff') format('woff'), url('IRANYekanFN-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('IRANYekan-Black.eot');
+  src: url('IRANYekan-Black.eot?#iefix') format('embedded-opentype'), url('IRANYekan-Black.woff2') format('woff2'),
+    url('IRANYekan-Black.woff') format('woff'), url('IRANYekan-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekanFN';
+  src: url('IRANYekanFN-ExtraBlack.eot');
+  src: url('IRANYekanFN-ExtraBlack.eot?#iefix') format('embedded-opentype'), url('IRANYekanFN-ExtraBlack.woff2') format('woff2'),
+    url('IRANYekanFN-ExtraBlack.woff') format('woff'), url('IRANYekanFN-ExtraBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekanFN';
+  src: url('IRANYekanFN-Bold.eot');
+  src: url('IRANYekanFN-Bold.eot?#iefix') format('embedded-opentype'), url('IRANYekanFN-Bold.woff2') format('woff2'),
+    url('IRANYekanFN-Bold.woff') format('woff'), url('IRANYekanFN-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('IRANYekan-ExtraBlack.eot');
+  src: url('IRANYekan-ExtraBlack.eot?#iefix') format('embedded-opentype'), url('IRANYekan-ExtraBlack.woff2') format('woff2'),
+    url('IRANYekan-ExtraBlack.woff') format('woff'), url('IRANYekan-ExtraBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('IRANYekan-ExtraBold.eot');
+  src: url('IRANYekan-ExtraBold.eot?#iefix') format('embedded-opentype'), url('IRANYekan-ExtraBold.woff2') format('woff2'),
+    url('IRANYekan-ExtraBold.woff') format('woff'), url('IRANYekan-ExtraBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekanFN';
+  src: url('IRANYekanFN-ExtraBold.eot');
+  src: url('IRANYekanFN-ExtraBold.eot?#iefix') format('embedded-opentype'), url('IRANYekanFN-ExtraBold.woff2') format('woff2'),
+    url('IRANYekanFN-ExtraBold.woff') format('woff'), url('IRANYekanFN-ExtraBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('IRANYekan-Light.eot');
+  src: url('IRANYekan-Light.eot?#iefix') format('embedded-opentype'), url('IRANYekan-Light.woff2') format('woff2'),
+    url('IRANYekan-Light.woff') format('woff'), url('IRANYekan-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekanFN';
+  src: url('IRANYekanFN-Light.eot');
+  src: url('IRANYekanFN-Light.eot?#iefix') format('embedded-opentype'), url('IRANYekanFN-Light.woff2') format('woff2'),
+    url('IRANYekanFN-Light.woff') format('woff'), url('IRANYekanFN-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekanFN';
+  src: url('IRANYekanFN-Medium.eot');
+  src: url('IRANYekanFN-Medium.eot?#iefix') format('embedded-opentype'), url('IRANYekanFN-Medium.woff2') format('woff2'),
+    url('IRANYekanFN-Medium.woff') format('woff'), url('IRANYekanFN-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('IRANYekan.eot');
+  src: url('IRANYekan.eot?#iefix') format('embedded-opentype'), url('IRANYekan.woff2') format('woff2'), url('IRANYekan.woff') format('woff'),
+    url('IRANYekan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('IRANYekan-Medium.eot');
+  src: url('IRANYekan-Medium.eot?#iefix') format('embedded-opentype'), url('IRANYekan-Medium.woff2') format('woff2'),
+    url('IRANYekan-Medium.woff') format('woff'), url('IRANYekan-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekanFN';
+  src: url('IRANYekanFN.eot');
+  src: url('IRANYekanFN.eot?#iefix') format('embedded-opentype'), url('IRANYekanFN.woff2') format('woff2'),
+    url('IRANYekanFN.woff') format('woff'), url('IRANYekanFN.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('IRANYekan-Thin.eot');
+  src: url('IRANYekan-Thin.eot?#iefix') format('embedded-opentype'), url('IRANYekan-Thin.woff2') format('woff2'),
+    url('IRANYekan-Thin.woff') format('woff'), url('IRANYekan-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANYekanFN';
+  src: url('IRANYekanFN-Thin.eot');
+  src: url('IRANYekanFN-Thin.eot?#iefix') format('embedded-opentype'), url('IRANYekanFN-Thin.woff2') format('woff2'),
+    url('IRANYekanFN-Thin.woff') format('woff'), url('IRANYekanFN-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
