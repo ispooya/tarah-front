@@ -15,7 +15,7 @@ export default {
   css: ['~/assets/fonts/stylesheet.css', '~/assets/main'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/vue-carousel.client'],
+  plugins: ['~/plugins/vue-scroll.client', '~/plugins/vue-progress.client'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -23,7 +23,9 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome'
+    // '@nuxtjs/vuetify'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -32,7 +34,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/auth-next'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -44,7 +47,53 @@ export default {
       lang: 'en'
     }
   },
-
+  router: {
+    middleware: ['auth', 'authenticated']
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {},
+  axios: {
+    baseURL: process.env.API_URL,
+    proxy: true,
+    header: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    }
+  },
+  proxy: {
+    '/backend/': {
+      target: 'http://localhost:8000',
+      pathRewrite: { '^/backend/': '' },
+      changeOrigin: true
+    }
+  },
+  fontawesome: {
+    icons: {
+      solid: true
+    }
+  },
+  auth: {
+    redirect: {
+      login: '/login',
+      logout: '/login',
+      callback: '/dashboard',
+      home: '/dashboard'
+    },
+    watchLoggedIn: true,
+    strategies: {
+      local: false,
+      laravelPassport: {
+        provider: 'laravel/passport',
+        grantType: 'password',
+        url: 'http://localhost:8000',
+        clientId: process.env.PASSPORT_CLIENT_ID,
+        clientSecret: process.env.PASSPORT_CLIENT_SECRET,
+        redirectUri: 'http://localhost:3000/',
+        scope: '',
+        endpoints: {
+          userInfo: '/api/user'
+        }
+      }
+    }
+  }
 }

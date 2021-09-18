@@ -28,13 +28,16 @@ module.exports = {
     },
     extend: {
       colors: {
+        'gray-75': '#f0f0f1',
         'black-900': '#05060f',
         asphalt: '#37383f'
       }
     }
   },
   variants: {
-    extend: {}
+    extend: {
+      opacity: ['group-hover']
+    }
   },
-  plugins: []
+  plugins: [require('tailwind-scrollbar-hide')]
 }
