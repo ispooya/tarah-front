@@ -1,5 +1,8 @@
 <template>
-  <div class="h-12 flex justify-between items-center px-4">
+  <div
+    class="
+  h-12  justify-between items-center px-4 hidden md:flex"
+  >
     <div class="h-full flex items-stretch">
       <nuxt-link to="" class="px-5"><logo class="h-full"/></nuxt-link>
     </div>

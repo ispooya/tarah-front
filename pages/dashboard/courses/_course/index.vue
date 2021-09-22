@@ -10,7 +10,7 @@
             class="group bg-gray-50 transition-all duration-200 w-full  rounded-4xl border flex justify-start items-center p-6 relative overflow-hidden"
           >
             <div class="ml-3">
-              <img v-if="!isLoading" :src="`http://localhost:8000/storage/${lesson.icon}`" alt="" class="rounded-md h-16" />
+              <img v-if="!isLoading" :src="`http://www.tarah-dev.ir:8000/storage/${lesson.icon}`" alt="" class="rounded-md h-16" />
             </div>
             <div>
               <span class="block text-right font-bold text-lg mb-2">{{ lesson.name }}</span>
@@ -35,7 +35,7 @@
             v-if="!isLoading"
             width="90px"
             height="90px"
-            :src="`http://localhost:8000/storage/${course.icon}`"
+            :src="`http://www.tarah-dev.ir:8000/storage/${course.icon}`"
             alt=""
             class="mb-6 block rounded-full ring-8 ring-gray-200 ring-offset-1"
           />

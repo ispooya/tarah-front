@@ -10,6 +10,7 @@
       <form class="mb-2" @submit.prevent="signup">
         <label for="" class="font-bold text-sm text-gray-600 mb-3 block">پست الکترونیکی</label>
         <input
+          dir="ltr"
           class="text-center mb-6 w-full h-3 bg-gray-100 focus:ring-2 focus:ring-black hover:ring-2 hover:ring-black outline-none py-5 px-3 rounded-lg text-sm transition-all"
           type="text"
           v-model="email"
@@ -20,6 +21,7 @@
 
         <label for="" class="font-bold text-sm text-gray-600 mb-3 block">کلمه عبور</label>
         <input
+          dir="ltr"
           class="text-center mb-9 w-full h-3 bg-gray-100 focus:ring-2 focus:ring-black hover:ring-2 hover:ring-black outline-none py-5 px-3 rounded-lg text-sm transition-all"
           type="password"
           v-model="password"
@@ -75,3 +77,7 @@
     }
   }
 </script>
+<style lang="sass" scoped>
+  input
+    direction: ltr !important
+</style>

@@ -7,10 +7,12 @@
         <span class="font-bold text-3xl" v-if="$route.name == 'dashboard-arcade'">arcade</span>
         <span class="font-bold text-3xl" v-if="$route.name == 'dashboard-saved'">ذخیره شده ها</span>
         <span class="font-bold text-3xl" v-if="$route.name == 'dashboard-leaderboard'">تابلوی امتیازات</span>
-        <div>
-          <form>
-            <input class="w-80 h-11 rounded-full bg-gray-75 px-5 pr-12" type="text" name="" id="" />
+        <div class="flex">
+          <form class="relative">
+            <font-awesome-icon :icon="['fas', 'search']" class="ml-3 absolute right-4 top-3 z-30 cursor-pointer" />
+            <input class="w-80 h-11 rounded-full bg-gray-75 px-5 pr-12 " type="text" name="" id="" />
           </form>
+          <div class="h-11 w-11 bg-black rounded-full mr-6 cursor-pointer"></div>
         </div>
       </div>
       <transition name="auth">

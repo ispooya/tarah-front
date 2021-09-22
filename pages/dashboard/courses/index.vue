@@ -74,7 +74,7 @@
                 <img
                   width="80px"
                   height="80px"
-                  :src="`http://localhost:8000/storage/${course.icon}`"
+                  :src="`http://www.tarah-dev.ir:8000/storage/${course.icon}`"
                   alt=""
                   class="rounded-full ring-4 ring-gray-200 ring-offset-1"
                 />

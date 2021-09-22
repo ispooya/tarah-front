@@ -41,6 +41,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
+  ssr: false,
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
@@ -62,7 +63,7 @@ export default {
   },
   proxy: {
     '/backend/': {
-      target: 'http://localhost:8000',
+      target: process.env.API_URL,
       pathRewrite: { '^/backend/': '' },
       changeOrigin: true
     }
@@ -79,16 +80,17 @@ export default {
       callback: '/dashboard',
       home: '/dashboard'
     },
+
     watchLoggedIn: true,
     strategies: {
       local: false,
       laravelPassport: {
         provider: 'laravel/passport',
         grantType: 'password',
-        url: 'http://localhost:8000',
+        url: process.env.API_URL,
         clientId: process.env.PASSPORT_CLIENT_ID,
         clientSecret: process.env.PASSPORT_CLIENT_SECRET,
-        redirectUri: 'http://localhost:3000/',
+        redirectUri: process.env.APP_URL,
         scope: '',
         endpoints: {
           userInfo: '/api/user'

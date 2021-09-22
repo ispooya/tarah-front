@@ -1,37 +1,44 @@
 <template>
-  <div class="h-24 w-full py-5" dir="rtl">
+  <div class="h-24 w-full md:py-5" dir="rtl">
     <!-- header -->
     <landing-header />
+    <mobile-landing-header />
 
-    <section class="container mx-auto flex justify-evenly items-center py-20">
-      <div class="w-2/5">
-        <h2 class="w-full text-5xl break-words font-bold mb-5 leading-relaxed">حرفه طراحی خود را به صورت تعاملی بسازید</h2>
+    <section class="container mx-auto flex-col-reverse md:flex-row flex justify-evenly items-center md:py-20">
+      <div class="w-full px-9 md:px-0 md:w-2/5">
+        <h2 class="w-full text-lg md:text-5xl break-words font-black md:font-bold mb-5 leading-relaxed">
+          حرفه طراحی خود را به صورت تعاملی بسازید
+        </h2>
         <p class="text-lg pb-6 ">
           مهارت های جدید طراحی را بیاموزید، دانش خود را ارزیابی و اندازه گیری کنید و با طراحان سراسر جهان ارتباط برقرار کنید.
         </p>
-        <nuxt-link to="" class="flex items-center pb-2"
+        <nuxt-link to="/login" class="flex items-center justify-center md:justify-start pb-2"
           ><span class="rounded-lg bg-black text-white px-5 py-3 font-semibold">ورود به طراح</span></nuxt-link
         >
       </div>
-      <video class="w-2/5 rounded-3xl" preload="metadata" playsinline="" autoplay="" loop="" muted="">
-        <source src="https://img.uxcel.com/assets/marketing/videos/home/build-your-design-career.mp4" />
+      <video class="w-11/12 md:w-2/5 rounded-3xl mb-4 md:mb-0" preload="auto" playsinline="" autoplay="" loop="" muted="">
+        <source :src="`http://www.tarah-dev.ir:8000/storage/build-your-design-career.mp4`" />
       </video>
     </section>
 
-    <section class="container mx-auto py-20 text-center">
-      <span class="block mb-8 text-gray-500">مورد اعتماد طراحان شرکت های برتر </span>
-      <div class="w-full grid grid-cols-4">
-        <nuxt-img class="max-w-max inline-block mx-auto" v-for="i in companies" :key="i" :src="i" loading="lazy" alt="" />
+    <section class="container mx-auto pt-10 md:py-20 text-center">
+      <span class="block mb-4 md:mb-8 text-gray-500 text-lg font-black md:text-base">مورد اعتماد طراحان شرکت های برتر </span>
+      <div class="w-full grid grid-cols-2 md:grid-cols-4">
+        <nuxt-img class="inline-block mx-auto" v-for="i in companies" :key="i" :src="i" loading="lazy" alt="" />
       </div>
     </section>
 
-    <section class="container mx-auto flex justify-evenly items-center py-20">
-      <video class="w-2/5 rounded-3xl" preload="metadata" playsinline="" autoplay="" loop="" muted="">
-        <source src="https://img.uxcel.com/assets/marketing/videos/home/learn-design.mp4" />
+    <section class="container mx-auto flex flex-col md:flex-row justify-evenly items-center pt-10 md:py-20">
+      <h2 class="w-full text-2xl break-words font-black md:font-bold mb-4 leading-relaxed px-9 block md:hidden">
+        یادگیری طراحی
+      </h2>
+
+      <video class="w-11/12 md:w-2/5 rounded-3xl mb-4 md:mb-0" preload="auto" playsinline="" autoplay="" loop="" muted="">
+        <source :src="`http://www.tarah-dev.ir:8000/storage/learn-design.mp4`" />
       </video>
-      <div class="w-2/5">
-        <h2 class="w-full text-5xl break-words font-bold mb-5 leading-relaxed">یادگیری طراحی</h2>
-        <p class="text-lg pb-6 font-light">
+      <div class="w-full px-9 md:px-0 md:w-2/5">
+        <h2 class="w-full text-5xl break-words font-bold mb-5 leading-relaxed hidden md:block">یادگیری طراحی</h2>
+        <p class="text-lg md:pb-6 font-light">
           دسترسی به کتابخانه ای گسترده از دوره های طراحی UX/UI و درس هایی با اندازه کوچک که توسط متخصصان طراحی برای متخصصان طراحی ایجاد شده
           است.
         </p>
@@ -41,10 +48,10 @@
       </div>
     </section>
 
-    <section class="container mx-auto flex justify-evenly items-center py-20">
-      <div class="w-2/5">
-        <h2 class="w-full text-5xl break-words font-bold mb-5 leading-relaxed">ارزیابی مهارت ها</h2>
-        <p class="text-lg pb-6 font-light">
+    <section class="container mx-auto flex flex-col-reverse md:flex-row justify-evenly items-center pt-10 md:py-20">
+      <div class="w-full px-9 md:px-0 md:w-2/5">
+        <h2 class="w-full text-2xl md:text-5xl font-black md:font-bold break-words mb-5 leading-relaxed">ارزیابی مهارت ها</h2>
+        <p class="text-lg md:pb-6 font-light">
           با ارزیابی مهارت های UX/UI بینش های ارزشمندی در مورد دانش طراحی خود کسب کنید. مهارت های خود را بسنجید و گزارش قابل اشتراک گذاری
           دریافت کنید.
         </p>
@@ -52,17 +59,17 @@
           <span class="py-3 font-semibold text-blue-800">بیشتر بدانید -></span>
         </nuxt-link>
       </div>
-      <video class="w-2/5 rounded-3xl" preload="metadata" playsinline="" autoplay="" loop="" muted="">
-        <source src="https://img.uxcel.com/assets/marketing/videos/home/learn-design.mp4" />
+      <video class="w-11/12 md:w-2/5 rounded-3xl mb-4 md:mb-0" preload="auto" playsinline="" autoplay="" loop="" muted="">
+        <source :src="`http://www.tarah-dev.ir:8000/storage/learn-design.mp4`" />
       </video>
     </section>
 
-    <section class="container mx-auto py-20 text-center">
-      <span class="block mb-8 text-gray-500">آمارها به خودی خود صحبت می‌کنند</span>
-      <div class="w-full grid grid-cols-4">
+    <section class="container mx-auto pt-10 md:py-20 text-center">
+      <span class="block mb-4 md:mb-8 text-gray-500 text-lg font-black md:text-base">آمارها به خودی خود صحبت می‌کنند</span>
+      <div class="w-full grid grid-cols-2 md:grid-cols-4 overflow-hidden">
         <div>
           <span dir="ltr" class="mb-2 text-5xl font-bold block">500k+</span>
-          <span dir="ltr" class="text-gray-500">درس های تمام شده</span>
+          <span dir="ltr" class="inline-block text-gray-500 mb-4">درس های تمام شده</span>
         </div>
         <div>
           <span dir="ltr" class="mb-2 text-5xl font-bold block">140k+</span>
@@ -79,11 +86,11 @@
       </div>
     </section>
 
-    <section class="py-28 px-20 text-center rounded-t-5xl bg-gray-100">
+    <section class="py-14 md:py-28 px-10 md:px-20 text-center rounded-t-4xl md:rounded-t-5xl bg-gray-100 mt-10 md:mt-0">
       <div class=" max-w-screen-xl mx-auto">
-        <h2 class="text-5xl font-semibold text-right mb-12">دانش آموختگان ما می‌گویند...</h2>
-        <div class="flex ">
-          <div class="w-1/3 px-5">
+        <h2 class="text-2xl md:text-5xl font-bold md:font-semibold text-right mb-4 md:mb-12">دانش آموختگان ما می‌گویند...</h2>
+        <div class="flex flex-col md:flex-row">
+          <div class="w-full md:w-1/3 px-5 md:block">
             <!-- user -->
             <div class="rounded-3xl bg-white shadow-3xl p-10 mb-10">
               <p class="text-right mb-7">
@@ -115,7 +122,7 @@
             </div>
           </div>
 
-          <div class="w-1/3 px-5">
+          <div class="w-full md:w-1/3 px-5  ">
             <!-- user -->
             <div class="rounded-3xl bg-white shadow-3xl p-10 mb-10">
               <p class="text-right mb-7">
@@ -149,7 +156,7 @@
             </div>
           </div>
 
-          <div class="w-1/3 px-5">
+          <div class="w-full md:w-1/3 px-5 hidden md:block">
             <!-- user -->
             <div class="rounded-3xl bg-white shadow-3xl p-10 mb-10">
               <p class="text-right mb-7">
@@ -185,19 +192,19 @@
       </div>
     </section>
 
-    <footer class="py-28 px-20 -mt-11 text-center rounded-t-5xl bg-black-900">
+    <footer class="py-14 md:py-28 px-10 md:px-20 -mt-11 text-center rounded-4xl md:rounded-t-5xl bg-black-900 overflow-hidden">
       <div class="max-w-screen-xl mx-auto">
-        <div class="text-white flex justify-between mx-auto mb-48">
-          <h2 class="text-5xl font-bold w-1/2 text-right">ساختن حرفه طراحی شما هرگز آسان نبوده است.</h2>
+        <div class="text-white flex flex-col items-center md:flex-row justify-between mx-auto mb-10 md:mb-48">
+          <h2 class="text-xl md:text-5xl font-black md:font-bold md:w-1/2 text-right">ساختن حرفه طراحی شما هرگز آسان نبوده است.</h2>
           <nuxt-link
             id="footer-signin-link"
             to=""
-            class="inline-flex justify-center items-center h-32 w-64 px-10 bg-yellow-300 font-bold text-3xl rounded-full text-black-900"
+            class="mt-10 md:mt-0 inline-flex justify-center items-center h-20 md:h-32 w-64 px-10 bg-yellow-300 font-bold text-3xl rounded-full text-black-900"
             ><span>ثبت نام</span></nuxt-link
           >
         </div>
 
-        <div class="grid grid-cols-5 gap-16 text-white mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-16 text-white mb-6">
           <div class="px-5">
             <logo class="w-28 mb-5" color="light" />
             <button class="rounded-md bg-white text-black-900 px-2 py-1 w-full">با ما در تماس باشید</button>
@@ -248,13 +255,13 @@
             </ul>
           </div>
         </div>
-        <div class="flex justify-between text-gray-400">
-          <div class="grid grid-cols-3 gap-8 ">
+        <div class="flex flex-col md:flex-row justify-between text-gray-400">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 mb-4 md:mb-0">
             <nuxt-link to="">سیاست حفظ حریم خصوصی </nuxt-link>
             <nuxt-link to="">شرایط استفاده از خدمات </nuxt-link>
             <nuxt-link to="">شراط استفاده از کوکی ها </nuxt-link>
           </div>
-          <div>تمامی حقوق این وبسایت مطعلق به استودیو وانا می‌باشد</div>
+          <div>تمامی حقوق این وبسایت متعلق به استودیو وانا می‌باشد</div>
         </div>
       </div>
     </footer>
@@ -263,19 +270,18 @@
 
 <script>
   export default {
-    layout: 'default',
-
+    auth: 'guest',
     data() {
       return {
         companies: [
-          'https://assets.website-files.com/60448d88229430054323572f/6139d1acf6299f5e189fc196_amazon.svg',
-          'https://assets.website-files.com/60448d88229430054323572f/6139d1acc732767bca8c0f03_samsung.svg',
-          'https://assets.website-files.com/60448d88229430054323572f/6139d1acb9efb0469789aea7_squarespace.svg',
-          'https://assets.website-files.com/60448d88229430054323572f/6139d1add0cbc977d35d6eed_zillow.svg',
-          'https://assets.website-files.com/60448d88229430054323572f/6139d1addbc977fe35991229_sephora.svg',
-          'https://assets.website-files.com/60448d88229430054323572f/6139d1ac29c5f081adea3780_capital%20one.svg',
-          'https://assets.website-files.com/60448d88229430054323572f/6139d1ac6ae6725eacff68cc_sendible.svg',
-          'https://assets.website-files.com/60448d88229430054323572f/6139d1ac6f61de7554ec898a_gamesys.svg'
+          `http://www.tarah-dev.ir:8000/storage/6139d1acf6299f5e189fc196_amazon.svg`,
+          `http://www.tarah-dev.ir:8000/storage/6139d1acc732767bca8c0f03_samsung.svg`,
+          `http://www.tarah-dev.ir:8000/storage/6139d1acb9efb0469789aea7_squarespace.svg`,
+          `http://www.tarah-dev.ir:8000/storage/6139d1add0cbc977d35d6eed_zillow.svg`,
+          `http://www.tarah-dev.ir:8000/storage/6139d1addbc977fe35991229_sephora.svg`,
+          `http://www.tarah-dev.ir:8000/storage/6139d1ac29c5f081adea3780_capital%20one.svg`,
+          `http://www.tarah-dev.ir:8000/storage/6139d1ac6ae6725eacff68cc_sendible.svg`,
+          `http://www.tarah-dev.ir:8000/storage/6139d1ac6f61de7554ec898a_gamesys.svg`
         ]
       }
     }
