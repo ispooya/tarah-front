@@ -41,7 +41,7 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
-  ssr: false,
+  ssr: true,
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
